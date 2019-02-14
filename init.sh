@@ -8,6 +8,11 @@ sudo apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoc
 sudo apt-get install -y vim
 sudo apt-get install -y htop
 sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+sudo apt-get install -y python3
+sudo apt-get install -y pip
+sudo apt-get install -y apache2
+sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i -y google-chrome-stable_current_amd64.deb
