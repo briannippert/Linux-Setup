@@ -4,7 +4,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-sudo apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
+sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
 sudo apt-get install -y vim
 sudo apt-get install -y htop
 sudo apt-get install -y nodejs
