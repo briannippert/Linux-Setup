@@ -14,5 +14,4 @@ sudo apt-get install -y pip
 sudo apt-get install -y apache2
 sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+
