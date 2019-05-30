@@ -10,7 +10,7 @@ sudo apt-get install -y htop
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 sudo apt-get install -y python3
-sudo apt-get install -y pip
+sudo apt-get install -y python3-pip
 sudo apt-get install -y apache2
 sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
