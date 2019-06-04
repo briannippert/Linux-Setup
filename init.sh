@@ -4,6 +4,9 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+
 sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
 sudo apt-get install -y vim
 sudo apt-get install -y htop
