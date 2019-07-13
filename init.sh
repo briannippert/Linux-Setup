@@ -12,6 +12,7 @@ sudo add-apt-repository multiverse
 sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
 sudo apt-get install -y vim
 sudo apt-get install -y htop
+sudo apt install gnome-tweak-tool
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 sudo apt-get install -y python3
@@ -24,7 +25,7 @@ sudo apt-get install docker.io
 
 #############Snap Packages################
 sudo snap install github-desktop --edge
-sudo snap install vscode --classic
+sudo snap install code --classic
 sudo snap install slack --classic
 
 #############Reload Env Variables#########
