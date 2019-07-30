@@ -16,6 +16,7 @@ sudo apt install gnome-tweak-tool
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 sudo apt-get install -y python3
+sudo apt-get install -y net-tools
 sudo apt-get install -y python3-pip
 sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
