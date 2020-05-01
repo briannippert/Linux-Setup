@@ -20,12 +20,12 @@ sudo apt-get install -y net-tools
 sudo apt-get install -y python3-pip
 sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
+sudo apt-get install -y arc-theme
 
 #########Docker###########################
 sudo apt-get install docker.io
 
 #############Snap Packages################
-sudo snap install github-desktop --edge
 sudo snap install code --classic
 sudo snap install slack --classic
 
