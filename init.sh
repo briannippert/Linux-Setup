@@ -11,6 +11,7 @@ sudo add-apt-repository multiverse
 ############General Updates###############
 sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
 sudo apt-get install -y vim
+sudo apt-get install -y curl
 sudo apt-get install -y htop
 sudo apt install gnome-tweak-tool
 sudo apt-get install -y nodejs
