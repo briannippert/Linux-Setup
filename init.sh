@@ -10,10 +10,11 @@ sudo add-apt-repository multiverse
 
 ############General Updates###############
 sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
+
+############Development Packages###############
 sudo apt-get install -y vim
 sudo apt-get install -y curl
 sudo apt-get install -y htop
-sudo apt install gnome-tweak-tool
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 sudo apt-get install -y python3
@@ -21,7 +22,11 @@ sudo apt-get install -y net-tools
 sudo apt-get install -y python3-pip
 sudo apt-get install -y openssh-server
 sudo apt-get install -y build-essential
+
+############GUI Tools###############
 sudo apt-get install -y arc-theme
+sudo apt install -y gnome-tweak-tool
+sudo apt install -y indicator-multiload
 
 #########Docker###########################
 sudo apt-get install docker.io
