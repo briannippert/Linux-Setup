@@ -26,7 +26,7 @@ dev_packages=(
    dotnet6
 )
 
-sudo apt-get install -y "${dev_packages[*]}"
+sudo apt-get install -y "${dev_packages[@]}"
 
 
 if [[ "$installGUIApps" != "n" ]]; then
