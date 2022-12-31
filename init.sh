@@ -12,16 +12,21 @@ cd setup
 ############General Updates###############
 sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
 ############Development Packages###############
-sudo apt-get install -y vim
-sudo apt-get install -y curl
-sudo apt-get install -y htop
-sudo apt-get install -y nodejs
-sudo apt-get install -y npm
-sudo apt-get install -y python3
-sudo apt-get install -y net-tools
-sudo apt-get install -y python3-pip
-sudo apt-get install -y build-essential
-sudo apt-get install -y dotnet6
+
+dev_packages=(
+   vim
+   curl
+   htop
+   nodejs
+   npm
+   python3
+   net-tools
+   python3-pip
+   build-essential
+   dotnet6
+)
+
+sudo apt-get install -y "${dev_packages[*]}"
 
 
 if [[ "$installGUIApps" != "n" ]]; then
