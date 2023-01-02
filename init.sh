@@ -24,6 +24,7 @@ dev_packages=(
    python3-pip
    build-essential
    dotnet6
+   default-jdk
 
 )
 
@@ -31,6 +32,7 @@ gui_packages={
    psensor
    notepadqq
 }
+
 
 sudo apt-get install -y "${dev_packages[@]}"
 
