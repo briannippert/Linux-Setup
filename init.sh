@@ -24,12 +24,19 @@ dev_packages=(
    python3-pip
    build-essential
    dotnet6
+
 )
+
+gui_packages={
+   psensor
+   notepadqq
+}
 
 sudo apt-get install -y "${dev_packages[@]}"
 
 
 if [[ "$installGUIApps" != "n" ]]; then
+   sudo apt-get install -y "${gui_packages[@]}"
    #Install Vs Code#
    wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
    cp "download?build=stable&os=linux-deb-x64" "vsCode.deb"
