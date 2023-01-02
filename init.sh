@@ -31,6 +31,8 @@ dev_packages=(
 gui_packages={
    psensor
    notepadqq
+   gnome-tweaks
+
 }
 
 
