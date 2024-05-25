@@ -11,7 +11,7 @@ echo -n "Would you like to install GUI Apps? (Y/n): "
 read installGUIApps
 
 # Update the system, upgrade packages, remove unnecessary packages, and clean up
-sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean -y
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean -y
 
 # List of development packages to be installed
 dev_packages=(
@@ -24,7 +24,7 @@ dev_packages=(
    net-tools
    python3-pip
    build-essential
-   dotnet6
+   dotnet8
    default-jdk
 )
 
@@ -42,10 +42,17 @@ if [[ "$installGUIApps" != "n" ]]; then
    sudo apt-get install -y "${gui_packages[@]}"
 
    # Download and install Visual Studio Code
-   wget -qO- "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" | sudo dpkg -i -
+   wget -qO vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+   sudo dpkg -i vscode.deb
+   sudo apt-get install -f -y # Fix dependencies
 
    # Download and install Discord
-   wget -qO- "https://discord.com/api/download?platform=linux&format=deb" | sudo dpkg -i -
+   wget -qO discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+   sudo dpkg -i discord.deb
+   sudo apt-get install -f -y # Fix dependencies
+
+   # Clean up downloaded .deb files
+   rm vscode.deb discord.deb
 fi
 
 # Reload environment variables
