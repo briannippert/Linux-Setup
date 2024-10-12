@@ -26,6 +26,8 @@ dev_packages=(
    build-essential
    dotnet8
    default-jdk
+   #Required for Jetbrains Toolbox
+   libfuse2
 )
 
 # Install the development packages
