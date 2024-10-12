@@ -59,8 +59,8 @@ fi
 
 
 # Check current Git user.name and user.email
-current_username=$(git config --local user.name)
-current_email=$(git config --local user.email)
+current_username=$(git config --global user.name)
+current_email=$(git config --global user.email)
 
 # Display current settings if available
 if [ -n "$current_username" ] && [ -n "$current_email" ]; then
@@ -77,10 +77,10 @@ fi
 #Setup Git  
 read -p "Enter Git user.name: " username
 read -p "Enter Git user.email: " email
-git config --local user.name "$username"
-git config --local user.email "$email"
-echo "Git user.name set to: $(git config --local user.name)"
-echo "Git user.email set to: $(git config --local user.email)"
+git config --global user.name "$username"
+git config --global user.email "$email"
+echo "Git user.name set to: $(git config --global user.name)"
+echo "Git user.email set to: $(git config --global user.email)"
 
 # Reload environment variables
 source ~/.bashrc
