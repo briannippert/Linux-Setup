@@ -15,13 +15,13 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && 
 
 # List of development packages to be installed
 dev_packages=(
+   git
    vim
    curl
    htop
    nodejs
    npm
    python3
-   net-tools
    python3-pip
    build-essential
    dotnet8
@@ -56,6 +56,31 @@ if [[ "$installGUIApps" != "n" ]]; then
    # Clean up downloaded .deb files
    rm vscode.deb discord.deb
 fi
+
+
+# Check current Git user.name and user.email
+current_username=$(git config --local user.name)
+current_email=$(git config --local user.email)
+
+# Display current settings if available
+if [ -n "$current_username" ] && [ -n "$current_email" ]; then
+    echo "Current Git user.name: $current_username"
+    echo "Current Git user.email: $current_email"
+    read -p "Do you want to overwrite these values? (y/n): " overwrite
+
+    if [[ "$overwrite" != "y" ]]; then
+        echo "Exiting without changes."
+        exit 0
+    fi
+fi
+
+#Setup Git  
+read -p "Enter Git user.name: " username
+read -p "Enter Git user.email: " email
+git config --local user.name "$username"
+git config --local user.email "$email"
+echo "Git user.name set to: $(git config --local user.name)"
+echo "Git user.email set to: $(git config --local user.email)"
 
 # Reload environment variables
 source ~/.bashrc
