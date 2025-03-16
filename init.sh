@@ -24,7 +24,8 @@ dev_packages=(
    python3
    python3-pip
    build-essential
-   dotnet8
+   dotnet9
+   tmux
    default-jdk
    #Required for Jetbrains Toolbox
    libfuse2
